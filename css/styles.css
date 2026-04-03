@@ -1,0 +1,560 @@
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:#F7F7F7;
+color:#111;
+line-height:1.5
+}
+
+h1{
+text-align:center;
+font-size:20px;
+letter-spacing:2px;
+font-weight:600
+}
+
+/* HERO */
+
+.hero{
+padding:36px;
+background:#ffffff;
+border-bottom:1px solid #eee
+}
+
+.heroContent{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px
+}
+
+.heroText{
+max-width:480px
+}
+
+.heroText h3{
+font-size:18px;
+margin-bottom:10px
+}
+
+.heroText p{
+font-size:14px;
+color:#666;
+margin-bottom:16px
+}
+
+.heroText button{
+border:2px solid #95C11F;
+background:none;
+padding:8px 18px;
+color:#95C11F;
+border-radius:6px;
+cursor:pointer;
+transition:.2s
+}
+
+.heroText button:hover{
+background:#95C11F;
+color:white
+}
+
+.heroImage{
+width:100%;
+max-width:180px;
+aspect-ratio:1 / 1;  
+background:url("../images/hero.jpg");
+background-size:cover;
+background-position:center;
+border-radius:14px;
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
+}
+
+/* FILTER */
+
+.filterSection{
+padding:24px
+}
+
+.tabs{
+display:flex;
+gap:30px;
+font-size:16px;
+font-weight:600
+}
+
+.tabs span{
+color:#999;
+cursor:pointer;
+padding-bottom:4px
+}
+
+.tabs .active{
+color:#111;
+border-bottom:2px solid #111
+}
+
+.filterScroll{
+display:flex;
+align-items:center;
+margin-top:12px
+}
+
+.scrollBtn{
+border:none;
+background:none;
+font-size:20px;
+cursor:pointer;
+color:#666
+}
+
+#currencyFilters{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:10px
+}
+
+#currencyFilters button{
+background:white;
+border:1px solid #e6e6e6;
+padding:6px 14px;
+border-radius:8px;
+cursor:pointer;
+font-weight:500;
+transition:.2s
+}
+
+#currencyFilters button:hover{
+background:#95C11F;
+color:white;
+border-color:#95C11F
+}
+
+/* CARD GRID */
+#currencyCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* ROWS INSIDE CARD */
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* CURRENCY INFO (flag + name) */
+.currencyInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Currency name */
+.currencyName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* RATE INFO */
+.rateInfo {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* SYMBOLS */
+.symbol {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* AMOUNT DISPLAY */
+.amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+  margin-top: 6px;
+}
+
+.currencyCode{
+font-weight:600;
+font-size:15px;
+}
+
+.countryRow{
+font-size:13px;
+color:#666;
+}
+
+.arrow{
+margin:0 6px;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+  #currencyCards {
+    grid-template-columns: 1fr;
+  }
+  .cardRow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* SEO LINKS */
+
+.seoLinks{
+padding:30px
+}
+
+.seoLinks ul{
+columns:2;
+list-style:none;
+padding:0
+}
+
+.seoLinks li{
+margin-bottom:6px
+}
+
+.seoLinks a{
+text-decoration:none;
+color:#444
+}
+
+.seoLinks a:hover{
+text-decoration:underline
+}
+
+/* CALCULATOR */
+
+/* OVERLAY (slightly softer blur feel) */
+#calculatorOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:none;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(4px);
+align-items:center;
+justify-content:center;
+z-index:5000;
+}
+
+/* MODAL */
+.calculatorModal{
+background:#fff;
+width:92%;
+border-radius:16px;
+box-shadow:0 25px 60px rgba(0,0,0,0.18);
+overflow:hidden;
+animation:fadeIn .2s ease;
+}
+
+/* HEADER */
+.calculatorHeader{
+padding:20px 22px 10px;
+font-size:20px;
+font-weight:700;
+}
+
+/* BODY */
+.calculatorBody{
+padding:18px 22px 22px;
+}
+
+/* CURRENCY ROW */
+.calcRow{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+margin-bottom:18px;
+}
+
+/* SELECT BOX */
+.calcSelect{
+flex:1;
+padding:14px;
+border-radius:10px;
+border:none;
+background:#f2f2f2;
+font-weight:600;
+font-size:15px;
+outline:none;
+cursor:pointer;
+}
+
+/* ARROW */
+.calcArrow{
+font-size:22px;
+font-weight:700;
+color:#111;
+}
+
+/* INPUT */
+.calcInput{
+width:100%;
+box-sizing: border-box;
+padding:16px;
+font-size:18px;
+border-radius:10px;
+border:2px solid #ddd;
+outline:none;
+margin-bottom:18px;
+transition:.2s;
+}
+
+.calcInput:focus{
+border-color:#95C11F;
+}
+
+/* BUTTON */
+.calcBtn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#95C11F;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.2s;
+}
+
+.calcBtn:hover{
+background:#7ea819;
+}
+
+/* RESULT AREA */
+.calcResult{
+margin-top:20px;
+padding:18px 22px;
+background:#f6f6f6;
+border-top:1px solid #eee;
+font-size:24px;
+font-weight:700;
+text-align:right;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* AD CARD */
+
+#adBanner{
+position:fixed;
+bottom:18px;
+left:50%;
+transform:translateX(-50%);
+
+width:90%;
+max-width:320px;
+height:auto;
+aspect-ratio:320 / 90;
+
+background:#000;
+color:#E6C68F;
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:clamp(18px, 5vw, 32px);
+border-radius:14px;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+z-index:9999;
+}
+
+@media (max-width: 480px){
+
+.calculatorBody{
+padding:16px;
+}
+
+/* Stack currency selectors vertically */
+.calcRow{
+flex-direction:column;
+align-items:stretch;
+gap:10px;
+}
+
+/* Arrow centered */
+.calcArrow{
+text-align:center;
+transform:rotate(90deg);
+}
+
+/* Bigger tap areas */
+.calcSelect{
+width:100%;
+padding:16px;
+font-size:16px;
+}
+
+/* Result smaller for small screens */
+.calcResult{
+font-size:20px;
+padding:16px;
+}
+
+}
+
+@media (max-width: 600px){
+
+.calculatorModal{
+  max-width:360px;
+}
+
+.heroContent{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.heroImage{
+max-width:100%;
+width:100%;
+}
+
+}
+
+/* ========================= */
+/* ARCHIVE PAGE IMPROVEMENTS */
+/* ========================= */
+
+/* Header extra info */
+.heroDate{
+font-size:13px;
+color:#666;
+margin-top:6px;
+text-align:center;
+}
+
+.backLink{
+display:inline-block;
+margin-top:12px;
+font-size:14px;
+color:#95C11F;
+text-decoration:none;
+font-weight:600;
+}
+
+.backLink:hover{
+text-decoration:underline;
+}
+
+/* Sections spacing */
+.examples,
+.seoText,
+.seoLinks{
+padding:24px;
+max-width:900px;
+margin:0 auto;
+}
+
+/* Section titles */
+.examples h2,
+.seoText h2,
+.seoLinks h2{
+font-size:18px;
+margin-bottom:12px;
+}
+
+/* Conversion list */
+.examples ul{
+padding-left:18px;
+margin:0;
+}
+
+.examples li{
+margin-bottom:8px;
+font-size:14px;
+}
+
+/* Paragraph text */
+.seoText p{
+font-size:14px;
+color:#444;
+margin-bottom:12px;
+line-height:1.6;
+}
+
+/* Improve seo links layout */
+.seoLinks ul{
+columns:2;
+gap:20px;
+}
+
+.seoLinks li{
+margin-bottom:8px;
+}
+
+.seoLinks a{
+display:block;
+padding:6px 0;
+font-size:14px;
+}
+
+/* Mobile optimization */
+@media (max-width:600px){
+
+.examples,
+.seoText,
+.seoLinks{
+padding:18px;
+}
+
+.seoLinks ul{
+columns:1;
+}
+
+}
+section{
+background:#fff;
+border-radius:12px;
+margin:16px;
+box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
