@@ -142,7 +142,7 @@ function generateHTML(base, target, rates, date) {
     if (c !== base) {
       links += `
 <li>
-<a href="/pages/${pathDate}/${base}-to-${c}-exchange-${date}.html">
+<a href="/ex/pages/${pathDate}/${base}-to-${c}-exchange-${date}.html">
 ${base} → ${c} (${date})
 </a>
 </li>`;
