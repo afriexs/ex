@@ -108,7 +108,7 @@ function generateCards(rates, currencies, date) {
       const baseMeta = currencyMeta[base] || { country: base, symbol: "", flag: "na" }
       const targetMeta = currencyMeta[target] || { country: target, symbol: "", flag: "na" }
 
-      const link = `/pages/${y}/${m}/${d}/${base}-to-${target}-exchange-${date}.html`
+      const link = `/ex/pages/${y}/${m}/${d}/${base}-to-${target}-exchange-${date}.html`
 
       html += `
 <a href="${link}" class="card" data-base="${base}" data-target="${target}">
