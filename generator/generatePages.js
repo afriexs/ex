@@ -185,7 +185,7 @@ ${base} → ${c} (${date})
 Data for ${date} (archived daily rate)
 </p>
 
-<a href="/" class="backLink">
+<a href="${SITE_URL}" class="backLink">
 ← Back to main exchange page
 </a>
 
